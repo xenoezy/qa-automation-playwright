@@ -31,16 +31,44 @@ The focus of this project is not on the number of test cases, but on:
 
 ```text
 QA-Automation/
-├─ pages/
-│  └─ PracticeFormPage.js      # Page Object Model
-│
 ├─ tests/
-│  └─ practiceForm/
-│     ├─ positive/
-│     │  └─ fillForm.spec.js   # Positive test scenario
-│     └─ negative/
-│        └─ emptyFirstName.spec.js # Negative test scenario
-│
+│   └─ practiceForm/
+│        ├─ positive/
+│        │     └─ fillForm.spec.js
+│        ├─ negative/
+│        │     ├─ emptyFirstName.spec.js
+│        │     ├─ invalidMobile.spec.js
+│        │     └─ emptyGender.spec.js
+│        └─ e2e/
+│              └─ fullFormFlow.spec.js
+├─ pages/
+│    └─ PracticeFormPage.js
+├─ testData/
+│    └─ practiceFormData.js
+├─ utils/
+│    └─ helpers.js
 ├─ playwright.config.js
-├─ package.json
-└─ README.md
+└─ package.json
+
+## How to Run
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Run all tests
+npx playwright test
+
+# 3. Run tests with UI
+npx playwright test --ui
+
+
+Notes
+
+Make sure Node.js version LTS 20.x is installed
+
+.gitignore already includes node_modules/ and test-results/ to avoid uploading large files
+
+The main branch of the repository is main
+
+All commits are saved and ready to push to GitHub
