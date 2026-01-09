@@ -50,6 +50,8 @@ QA-Automation/
 ├─ playwright.config.js
 └─ package.json
 
+---
+
 ## How to Run
 
 ```bash
@@ -62,8 +64,9 @@ npx playwright test
 # 3. Run tests with UI
 npx playwright test --ui
 
+---
 
-Notes
+ ## Notes
 
 Make sure Node.js version LTS 20.x is installed
 
@@ -72,3 +75,5 @@ Make sure Node.js version LTS 20.x is installed
 The main branch of the repository is main
 
 All commits are saved and ready to push to GitHub
+
+---
